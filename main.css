@@ -1,0 +1,95 @@
+body {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  margin: 0;
+  font-family: "roboto";
+  font-size: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  grid-column: span 2;
+  background-color: #011827;
+  height: 144px;
+}
+
+.header__logo {
+  height: 84px;
+  width: 128px;
+  margin-left: 27px;
+}
+
+.header__h1 {
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  width: 78px;
+  height: 84px;
+  margin-left: 10px;
+}
+
+.main {
+  display: grid;
+}
+
+.main__hackerImg {
+  width: 100vw;
+  height: auto;
+  object-fit: scale-down;
+}
+
+.main__btn {
+  justify-self: center;
+
+  font-size: 24px;
+  font-family: "roboto";
+  font-weight: 700;
+  color: #011827;
+  width: 308px;
+  height: 66px;
+  background-color: #8acfe5;
+  border: none;
+  margin-top: 37px;
+}
+
+.main__nav {
+  justify-self: center;
+  color: #36769d;
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  height: 19.97px;
+}
+
+.main__review {
+  display: flex;
+  justify-self: center;
+  font-family: "roboto";
+  height: 139px;
+  width: 439px;
+  margin-top: 67px;
+}
+
+.review__img {
+  height: 72px;
+  width: 73.34px;
+  margin-right: 22px;
+}
+
+.review__quote {
+  font-weight: 400;
+  width: 343.26px;
+}
+
+.quote__text {
+  font-style: italic;
+  margin: 0px;
+}
+
+.quote__name {
+  font-size: 18px;
+  margin: 0px;
+  height: 21px;
+  margin-top: 12px;
+}
