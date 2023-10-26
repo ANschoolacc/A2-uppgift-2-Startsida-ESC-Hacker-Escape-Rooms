@@ -1,15 +1,16 @@
+html {
+  font-size: 24px;
+}
+
 body {
   display: grid;
-  grid-template: 1fr / 1fr 1fr;
   margin: 0;
   font-family: "roboto";
-  font-size: 24px;
 }
 
 .header {
   display: flex;
   align-items: center;
-  grid-column: span 2;
   background-color: #011827;
   height: 144px;
 }
@@ -21,7 +22,7 @@ body {
 }
 
 .header__h1 {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 700;
   color: white;
   width: 78px;
@@ -30,7 +31,9 @@ body {
 }
 
 .main {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main__hackerImg {
@@ -40,9 +43,7 @@ body {
 }
 
 .main__btn {
-  justify-self: center;
-
-  font-size: 24px;
+  font-size: 1rem;
   font-family: "roboto";
   font-weight: 700;
   color: #011827;
@@ -54,17 +55,15 @@ body {
 }
 
 .main__nav {
-  justify-self: center;
   color: #36769d;
   margin-top: 30px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 0.7rem;
   height: 19.97px;
 }
 
 .main__review {
   display: flex;
-  justify-self: center;
   font-family: "roboto";
   height: 139px;
   width: 439px;
@@ -88,8 +87,13 @@ body {
 }
 
 .quote__name {
-  font-size: 18px;
+  font-size: 0.8rem;
   margin: 0px;
   height: 21px;
   margin-top: 12px;
+}
+
+.main__h2 {
+  font-size: 1.3rem;
+  margin-top: 105px;
 }
