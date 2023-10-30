@@ -3,7 +3,6 @@ html {
 }
 
 body {
-  display: grid;
   margin: 0;
   font-family: "roboto";
 }
@@ -14,13 +13,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: nowrap;
   overflow-x: hidden;
+}
 
-  &__bigImg {
+.upperMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+
+  &__hackerImg {
     width: 100vw;
-    height: auto;
-    object-fit: scale-down;
   }
 
   &__btn {
@@ -35,7 +38,7 @@ body {
     margin-top: 37px;
   }
 
-  &__a {
+  &__onlineChallenges {
     color: #36769d;
     margin-top: 30px;
     font-weight: 700;
@@ -43,7 +46,7 @@ body {
     height: 19.97px;
   }
 
-  &__challengeTitle {
+  &__popularTitle {
     font-size: 1.3rem;
     margin-top: 105px;
     font-weight: 400;
@@ -88,7 +91,6 @@ body {
   width: 100vw;
   margin-top: 44px;
   overflow-x: scroll;
-  white-space: nowrap;
   padding: 0px 0px 10px 52px;
 
   &__card {
@@ -103,7 +105,6 @@ body {
 
   &__img {
     background-image: url("assets/image 2.png");
-    width: auto;
     width: 363px;
     height: 219px;
     border-radius: 8px 8px 0px 0px;
@@ -132,12 +133,10 @@ body {
   }
 
   &__text {
+    color: #000000;
     font-size: 18px;
     white-space: normal;
-    line-height: 21.09px;
     margin: 0px 17px;
-
-    padding: 0;
     font-weight: 400;
   }
 
@@ -150,7 +149,8 @@ body {
     height: 44px;
     border-radius: 4px;
     border: none;
-    margin: 12px 18px;
+    margin: 20px 18px 12px 0px;
+    font-weight: 700;
   }
 }
 
@@ -161,6 +161,7 @@ body {
   align-items: center;
   margin-top: 56px;
   padding: 95px 0px 91px 0px;
+  overflow-x: hidden;
 
   &__text {
     color: #ffffff;
@@ -180,5 +181,86 @@ body {
     border: solid 2px #8acfe5;
     border-radius: 4px;
     margin-top: 56px;
+  }
+}
+
+.lowerMain {
+}
+
+.container {
+  &__img {
+    width: 100vw;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    margin-top: 105px;
+    font-weight: 700;
+    margin: 30px 20px 30px 20px;
+  }
+
+  &__text {
+    margin: 25px 20px 25px 20px;
+    font-weight: 400;
+  }
+
+  &__btn {
+    font-size: 1rem;
+    font-family: "roboto";
+    font-weight: 700;
+    color: #ffffff;
+    width: 308px;
+    height: 66px;
+    background-color: #e3170a;
+    border: none;
+    margin: 25px 0px 64px 21px;
+  }
+}
+
+.footer {
+  width: 100vw;
+  background-color: #011827;
+  color: #ffffff;
+  padding: 68px 0px 64px 0px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 40px 0px 7px 23px;
+  }
+
+  & ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    font-size: 0.8rem;
+    list-style: none;
+    color: #ffffff;
+    margin: 0px 0px 0px 23px;
+  }
+}
+
+.about {
+  width: 439px;
+
+  &__title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 0;
+    margin: 0px 0px 0px 23px;
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    list-style: none;
+    color: #ffffff;
+    margin: 0px 0px 0px 23px;
   }
 }

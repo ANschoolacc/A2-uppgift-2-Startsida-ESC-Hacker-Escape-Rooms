@@ -3,7 +3,6 @@ html {
 }
 
 body {
-  display: grid;
   margin: 0;
   font-family: "roboto";
 }
@@ -34,15 +33,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: nowrap;
   overflow-x: hidden;
 }
-.main__bigImg {
+
+.upperMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100vw;
-  height: auto;
-  object-fit: scale-down;
 }
-.main__btn {
+.upperMain__hackerImg {
+  width: 100vw;
+}
+.upperMain__btn {
   font-size: 1rem;
   font-family: "roboto";
   font-weight: 700;
@@ -53,14 +56,14 @@ body {
   border: none;
   margin-top: 37px;
 }
-.main__a {
+.upperMain__onlineChallenges {
   color: #36769d;
   margin-top: 30px;
   font-weight: 700;
   font-size: 0.7rem;
   height: 19.97px;
 }
-.main__challengeTitle {
+.upperMain__popularTitle {
   font-size: 1.3rem;
   margin-top: 105px;
   font-weight: 400;
@@ -100,7 +103,6 @@ body {
   width: 100vw;
   margin-top: 44px;
   overflow-x: scroll;
-  white-space: nowrap;
   padding: 0px 0px 10px 52px;
 }
 .sidescroll__card {
@@ -114,7 +116,6 @@ body {
 }
 .sidescroll__img {
   background-image: url("assets/image 2.png");
-  width: auto;
   width: 363px;
   height: 219px;
   border-radius: 8px 8px 0px 0px;
@@ -139,11 +140,10 @@ body {
   font-weight: 400;
 }
 .sidescroll__text {
+  color: #000000;
   font-size: 18px;
   white-space: normal;
-  line-height: 21.09px;
   margin: 0px 17px;
-  padding: 0;
   font-weight: 400;
 }
 .sidescroll__btn {
@@ -155,7 +155,8 @@ body {
   height: 44px;
   border-radius: 4px;
   border: none;
-  margin: 12px 18px;
+  margin: 20px 18px 12px 0px;
+  font-weight: 700;
 }
 
 .break {
@@ -165,6 +166,7 @@ body {
   align-items: center;
   margin-top: 56px;
   padding: 95px 0px 91px 0px;
+  overflow-x: hidden;
 }
 .break__text {
   color: #ffffff;
@@ -183,4 +185,72 @@ body {
   border: solid 2px #8acfe5;
   border-radius: 4px;
   margin-top: 56px;
+}
+
+.container__img {
+  width: 100vw;
+}
+.container__title {
+  font-size: 1.3rem;
+  margin-top: 105px;
+  font-weight: 700;
+  margin: 30px 20px 30px 20px;
+}
+.container__text {
+  margin: 25px 20px 25px 20px;
+  font-weight: 400;
+}
+.container__btn {
+  font-size: 1rem;
+  font-family: "roboto";
+  font-weight: 700;
+  color: #ffffff;
+  width: 308px;
+  height: 66px;
+  background-color: #e3170a;
+  border: none;
+  margin: 25px 0px 64px 21px;
+}
+
+.footer {
+  width: 100vw;
+  background-color: #011827;
+  color: #ffffff;
+  padding: 68px 0px 64px 0px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+.menu__title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 40px 0px 7px 23px;
+}
+.menu ul {
+  padding: 0;
+  margin: 0;
+}
+.menu__item {
+  font-size: 0.8rem;
+  list-style: none;
+  color: #ffffff;
+  margin: 0px 0px 0px 23px;
+}
+
+.about {
+  width: 439px;
+}
+.about__title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0;
+  margin: 0px 0px 0px 23px;
+}
+.about__text {
+  font-size: 0.8rem;
+  list-style: none;
+  color: #ffffff;
+  margin: 0px 0px 0px 23px;
 }
