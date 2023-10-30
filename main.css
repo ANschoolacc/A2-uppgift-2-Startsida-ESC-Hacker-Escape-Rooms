@@ -8,19 +8,18 @@ body {
   font-family: "roboto";
 }
 
+/*-----Header section-----*/
 .header {
   display: flex;
   align-items: center;
   background-color: #011827;
   height: 144px;
 }
-
 .header__logo {
   height: 84px;
   width: 128px;
   margin-left: 27px;
 }
-
 .header__h1 {
   font-size: 1rem;
   font-weight: 700;
@@ -30,18 +29,18 @@ body {
   margin-left: 10px;
 }
 
+/*----Main section----*/
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: nowrap;
 }
-
 .main__hackerImg {
   width: 100vw;
   height: auto;
   object-fit: scale-down;
 }
-
 .main__btn {
   font-size: 1rem;
   font-family: "roboto";
@@ -53,47 +52,64 @@ body {
   border: none;
   margin-top: 37px;
 }
-
-.main__nav {
+.main__a {
   color: #36769d;
   margin-top: 30px;
   font-weight: 700;
   font-size: 0.7rem;
   height: 19.97px;
 }
+.main__h2 {
+  font-size: 1.3rem;
+  margin-top: 105px;
+}
 
-.main__review {
+.review {
   display: flex;
   font-family: "roboto";
   height: 139px;
   width: 439px;
   margin-top: 67px;
 }
-
 .review__img {
   height: 72px;
   width: 73.34px;
   margin-right: 22px;
 }
-
-.review__quote {
+.review__text {
   font-weight: 400;
   width: 343.26px;
 }
-
-.quote__text {
+.review__quote {
   font-style: italic;
   margin: 0px;
 }
-
-.quote__name {
+.review__name {
   font-size: 0.8rem;
   margin: 0px;
   height: 21px;
   margin-top: 12px;
 }
 
-.main__h2 {
-  font-size: 1.3rem;
-  margin-top: 105px;
+.sidescroll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.sidescroll__article {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-left: 52px;
+  width: 368px;
+  height: fit-content;
+}
+.sidescroll__img {
+  grid-column: span 12;
+  width: 100%;
+  object-fit: scale-down;
+}
+.sidescroll__h2 {
+  grid-column: span 12;
+  font-size: 28px;
 }
