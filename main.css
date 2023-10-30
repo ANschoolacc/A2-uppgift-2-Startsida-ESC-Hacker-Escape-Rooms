@@ -35,8 +35,9 @@ body {
   flex-direction: column;
   align-items: center;
   flex-wrap: nowrap;
+  overflow-x: hidden;
 }
-.main__hackerImg {
+.main__bigImg {
   width: 100vw;
   height: auto;
   object-fit: scale-down;
@@ -59,15 +60,17 @@ body {
   font-size: 0.7rem;
   height: 19.97px;
 }
-.main__h2 {
+.main__challengeTitle {
   font-size: 1.3rem;
   margin-top: 105px;
+  font-weight: 400;
+  margin-bottom: 0;
 }
 
 .review {
   display: flex;
   font-family: "roboto";
-  height: 139px;
+  height: fit-content;
   width: 439px;
   margin-top: 67px;
 }
@@ -94,22 +97,90 @@ body {
 .sidescroll {
   display: flex;
   flex-direction: row;
+  width: 100vw;
+  margin-top: 44px;
   overflow-x: scroll;
   white-space: nowrap;
+  padding: 0px 0px 10px 52px;
 }
-.sidescroll__article {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  margin-left: 52px;
-  width: 368px;
-  height: fit-content;
+.sidescroll__card {
+  display: flex;
+  flex-direction: column;
+  width: 363px;
+  height: 446px;
+  box-shadow: 0 0 8px #b6bdb5;
+  border-radius: 8px;
+  margin: 0px 19px;
 }
 .sidescroll__img {
-  grid-column: span 12;
-  width: 100%;
-  object-fit: scale-down;
+  background-image: url("assets/image 2.png");
+  width: auto;
+  width: 363px;
+  height: 219px;
+  border-radius: 8px 8px 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.sidescroll__h2 {
-  grid-column: span 12;
+.sidescroll__title {
   font-size: 28px;
+  margin: 0;
+  margin: 0px 17px;
+  margin-top: 12px;
+}
+.sidescroll__rating {
+  margin: 0px 17px;
+  margin-bottom: 23px;
+}
+.sidescroll__participants {
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 15px;
+  font-weight: 400;
+}
+.sidescroll__text {
+  font-size: 18px;
+  white-space: normal;
+  line-height: 21.09px;
+  margin: 0px 17px;
+  padding: 0;
+  font-weight: 400;
+}
+.sidescroll__btn {
+  background-color: #e3170a;
+  color: #ffffff;
+  font-size: 0.7rem;
+  align-self: flex-end;
+  width: 179.28px;
+  height: 44px;
+  border-radius: 4px;
+  border: none;
+  margin: 12px 18px;
+}
+
+.break {
+  background-color: #011827;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 56px;
+  padding: 95px 0px 91px 0px;
+}
+.break__text {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0px 20px 0px 20px;
+  text-align: center;
+}
+.break__btn {
+  color: #8acfe5;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 66px;
+  width: 308px;
+  background-color: #011827;
+  border: solid 2px #8acfe5;
+  border-radius: 4px;
+  margin-top: 56px;
 }
