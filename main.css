@@ -108,6 +108,11 @@ body {
   margin-bottom: 0;
   margin-top: 105px;
 }
+@media screen and (max-width: 414px) {
+  .main__popularTitle {
+    font-size: 1rem;
+  }
+}
 
 .btnCont {
   display: flex;
@@ -133,7 +138,7 @@ body {
   height: 66px;
   width: 308px;
 }
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 414px) {
   .btnCont__onSiteBtn {
     width: fit-content;
   }
@@ -154,6 +159,7 @@ body {
   font-weight: 700;
   height: 19.97px;
   margin-top: 30px;
+  text-decoration: underline;
 }
 @media screen and (min-width: 740px) {
   .btnCont__onlineBtn {
@@ -165,6 +171,7 @@ body {
     margin-right: 8.5px;
     margin-top: 0;
     width: 308px;
+    text-decoration: none;
   }
 }
 
@@ -347,7 +354,7 @@ body {
     width: 632px;
   }
 }
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 414px) {
   .break__text {
     font-size: 1rem;
   }
@@ -369,7 +376,7 @@ body {
     margin-top: 44px;
   }
 }
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 414px) {
   .break__btn {
     width: fit-content;
   }
@@ -448,7 +455,7 @@ body {
     transform: translateX(-55px);
   }
 }
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 414px) {
   .lowerMainCont__btn {
     width: fit-content;
   }
