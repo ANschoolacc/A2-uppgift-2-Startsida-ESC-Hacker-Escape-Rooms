@@ -54,6 +54,9 @@ body {
     margin-bottom: 0;
     margin-top: 105px;
 
+    @include breakpoint($medium) {
+      font-size: 1.5rem;
+    }
     @include breakpointMin($xs) {
       font-size: 1rem;
     }

@@ -108,6 +108,11 @@ body {
   margin-bottom: 0;
   margin-top: 105px;
 }
+@media screen and (min-width: 960px) {
+  .main__popularTitle {
+    font-size: 1.5rem;
+  }
+}
 @media screen and (max-width: 414px) {
   .main__popularTitle {
     font-size: 1rem;
