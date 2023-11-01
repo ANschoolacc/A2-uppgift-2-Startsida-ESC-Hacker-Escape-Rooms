@@ -1,5 +1,9 @@
-@mixin breakpoint() {
-  @media screen and (min-width: 960px) {
+$small: 740px;
+$medium: 960px;
+$large: 1280px;
+
+@mixin breakpoint($point) {
+  @media screen and (min-width: $point) {
     @content;
   }
 }
@@ -20,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 
   &__hackerImg {
     width: 100vw;
@@ -175,12 +179,17 @@ body {
   margin-top: 44px;
   overflow-x: scroll;
   padding: 0px 0px 10px 52px;
+
   @include breakpoint() {
     align-items: center;
     overflow-x: auto;
     width: auto;
     padding: 0px 0px 10px 0px;
     margin-top: 87px;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 
   &__card {

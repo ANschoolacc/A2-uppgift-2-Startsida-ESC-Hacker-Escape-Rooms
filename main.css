@@ -243,6 +243,9 @@ body {
     margin-top: 87px;
   }
 }
+.sidescroll::-webkit-scrollbar {
+  display: none;
+}
 .sidescroll__card {
   display: flex;
   flex-direction: column;
