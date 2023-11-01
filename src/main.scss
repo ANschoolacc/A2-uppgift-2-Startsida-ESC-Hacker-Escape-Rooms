@@ -140,9 +140,13 @@ body {
     margin-top: 67px;
   }
   &__img {
-    max-height: 72px;
+    height: 72px;
     margin-right: 22px;
-    max-width: 73.34px;
+    width: 73.34px;
+    @include breakpoint($large) {
+      width: 96px;
+      height: 96px;
+    }
   }
   &__text {
     font-weight: 400;
@@ -284,7 +288,7 @@ body {
     max-width: 439px;
 
     @include breakpoint($medium) {
-      width: 632px;
+      max-width: 632px;
     }
 
     @include breakpointMin($xs) {
