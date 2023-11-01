@@ -2,16 +2,28 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100vw;
+  //width: 100vw;
   background-color: #011827;
   color: #ffffff;
   height: 566px;
   margin-top: 34px;
+
+  @include breakpoint() {
+    height: 467px;
+    margin-top: 183px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .about {
   width: 434px;
   margin-left: 23px;
+  @include breakpoint() {
+    width: 416px;
+    margin-top: 146px;
+    margin-left: 108px;
+  }
 
   &__title {
     font-size: 0.75rem;
@@ -29,11 +41,19 @@
 .menu {
   display: flex;
   flex-direction: column;
+  margin-left: 23px;
+  @include breakpoint() {
+    margin-top: 146px;
+    margin-left: 150px;
+  }
 
   &__title {
     font-size: 0.75rem;
     font-weight: 700;
-    margin: 7px 0px 7px 23px;
+    margin: 7px 0px 7px 0px;
+    @include breakpoint() {
+      margin-top: 0px;
+    }
   }
 
   & ul {
@@ -45,7 +65,8 @@
     font-size: 0.75rem;
     list-style: none;
     color: #ffffff;
-    margin: 0px 0px 0px 23px;
+    cursor: pointer;
+    line-height: 22px;
   }
 }
 
@@ -53,6 +74,10 @@
   display: flex;
   flex-direction: column;
   margin: 30px 0px 0px 23px;
+  @include breakpoint() {
+    margin-top: 146px;
+    margin-right: 206px;
+  }
 
   &__title {
     font-size: 0.75rem;
@@ -70,5 +95,7 @@
     font-size: 0.75rem;
     list-style: none;
     color: #ffffff;
+    line-height: 22px;
+    cursor: pointer;
   }
 }

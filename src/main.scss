@@ -47,16 +47,10 @@ body {
   }
 }
 
-.btnCont--offSet {
-  @include breakpoint() {
-    position: relative;
-    bottom: 33px;
-  }
-}
-
 .btnCont {
   display: flex;
   flex-direction: column;
+  margin-top: 37px;
 
   @include breakpoint() {
     flex-direction: row;
@@ -73,7 +67,7 @@ body {
     background-color: #8acfe5;
     border: none;
     border-radius: 4px;
-    margin-top: 37px;
+    cursor: pointer;
 
     @include breakpoint() {
       margin-top: 0px;
@@ -90,6 +84,7 @@ body {
     height: 19.97px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 
     @include breakpoint() {
       color: #ffffff;
@@ -104,6 +99,20 @@ body {
 
       //border: none;
     }
+  }
+}
+
+.btnCont--offSet {
+  @include breakpoint() {
+    position: relative;
+    bottom: 33px;
+    margin: 0;
+  }
+}
+
+.btnCont--moreTopMargin {
+  @include breakpoint() {
+    margin-top: 77px;
   }
 }
 
@@ -162,11 +171,17 @@ body {
 
 .sidescroll {
   display: flex;
-  flex-direction: row;
   width: 100vw;
   margin-top: 44px;
   overflow-x: scroll;
   padding: 0px 0px 10px 52px;
+  @include breakpoint() {
+    align-items: center;
+    overflow-x: auto;
+    width: auto;
+    padding: 0px 0px 10px 0px;
+    margin-top: 87px;
+  }
 
   &__card {
     display: flex;
@@ -176,6 +191,10 @@ body {
     box-shadow: 0 0 8px #b6bdb5;
     border-radius: 8px;
     margin: 0px 19px;
+
+    @include breakpoint() {
+      margin: 0px 21px;
+    }
   }
 
   &__img {
@@ -226,12 +245,14 @@ body {
     border: none;
     margin: 20px 18px 12px 0px;
     font-weight: 700;
+    cursor: pointer;
   }
 }
 
 .break {
   background-color: #011827;
   display: flex;
+  width: 100vw;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -239,12 +260,20 @@ body {
   overflow-x: hidden;
   height: 500px;
 
+  @include breakpoint() {
+    margin-top: 87px;
+  }
+
   &__text {
     color: #ffffff;
     font-size: 1.2rem;
     font-weight: 400;
     margin: 0px 20px 0px 20px;
     text-align: center;
+    width: 439px;
+    @include breakpoint() {
+      width: 632px;
+    }
   }
 
   &__btn {
@@ -257,15 +286,34 @@ body {
     border: solid 2px #8acfe5;
     border-radius: 4px;
     margin-top: 56px;
+    cursor: pointer;
+    @include breakpoint() {
+      margin-top: 44px;
+    }
   }
 }
 
-.lowerMain {
-}
-
 .container {
+  @include breakpoint() {
+    display: flex;
+    height: 460px;
+    width: 100vw;
+  }
+
+  &__content {
+    @include breakpoint() {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50vw;
+    }
+  }
   &__img {
     width: 100vw;
+    @include breakpoint() {
+      width: 50vw;
+    }
   }
 
   &__title {
@@ -274,12 +322,21 @@ body {
     font-weight: 700;
     width: 435px;
     margin: 30px 20px 30px 20px;
+
+    @include breakpoint() {
+      width: 416px;
+      margin: 0;
+      //margin-top: 60px;
+    }
   }
 
   &__text {
     margin: 25px 20px 25px 20px;
     font-weight: 400;
     width: 435px;
+    @include breakpoint() {
+      width: 416px;
+    }
   }
 
   &__btn {
@@ -291,8 +348,20 @@ body {
     height: 66px;
     background-color: #e3170a;
     border: none;
+    border-radius: 4px;
     margin: 25px 0px 64px 21px;
+    cursor: pointer;
+
+    @include breakpoint() {
+      margin: 0;
+      position: relative;
+      transform: translateX(-55px);
+    }
   }
+}
+
+.container--reversed {
+  flex-direction: row-reverse;
 }
 /*-----Footer section-----*/
 @import "footer";
