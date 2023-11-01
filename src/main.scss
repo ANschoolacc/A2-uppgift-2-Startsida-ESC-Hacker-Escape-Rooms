@@ -136,6 +136,9 @@ body {
     font-family: "roboto";
     height: fit-content;
     margin-top: 67px;
+    @include breakpoint($large) {
+      margin-top: 74px;
+    }
   }
   &__img {
     height: 72px;
@@ -186,14 +189,13 @@ body {
   display: flex;
   margin-top: 44px;
   overflow-x: scroll;
-  padding: 0px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
   width: 100vw;
 
   @include breakpoint($xl) {
     align-items: center;
     margin-top: 87px;
     overflow-x: auto;
-    padding: 0px 0px 10px 0px;
     width: auto;
   }
   &::-webkit-scrollbar {

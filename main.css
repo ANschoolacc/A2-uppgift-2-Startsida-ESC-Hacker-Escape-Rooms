@@ -197,6 +197,11 @@ body {
   height: fit-content;
   margin-top: 67px;
 }
+@media screen and (min-width: 1080px) {
+  .reviewCont__review {
+    margin-top: 74px;
+  }
+}
 .reviewCont__img {
   height: 72px;
   margin-right: 22px;
@@ -249,7 +254,7 @@ body {
   display: flex;
   margin-top: 44px;
   overflow-x: scroll;
-  padding: 0px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
   width: 100vw;
 }
 @media screen and (min-width: 1200px) {
@@ -257,7 +262,6 @@ body {
     align-items: center;
     margin-top: 87px;
     overflow-x: auto;
-    padding: 0px 0px 10px 0px;
     width: auto;
   }
 }
