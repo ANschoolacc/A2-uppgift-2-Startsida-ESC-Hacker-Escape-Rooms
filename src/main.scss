@@ -379,6 +379,7 @@ body {
 
     @include breakpoint($large) {
       margin: 0;
+      margin-bottom: 66px;
       position: relative;
       transform: translateX(-55px);
     }
