@@ -3,13 +3,13 @@
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  height: 566px;
+  min-height: 566px;
   justify-content: center;
   margin-top: 34px;
 
   @include breakpoint($medium) {
     flex-direction: row;
-    height: 467px;
+    min-height: 467px;
     justify-content: space-between;
     margin-top: 183px;
   }
@@ -19,19 +19,21 @@
   max-width: 434px;
 
   @include breakpoint($medium) {
-    margin-left: 108px;
-    margin-top: 146px;
+    margin: 146px 0px 0px 108px;
     width: 416px;
   }
   &__title {
     font-size: 0.75rem;
     font-weight: 700;
     margin: 0;
+    margin-bottom: 7px;
   }
   &__text {
+    margin: 0;
     color: #ffffff;
     font-size: 0.75rem;
     list-style: none;
+    margin-bottom: 40px;
   }
 }
 .menu {
