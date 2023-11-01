@@ -133,6 +133,11 @@ body {
   height: 66px;
   width: 308px;
 }
+@media screen and (max-width: 340px) {
+  .btnCont__onSiteBtn {
+    width: fit-content;
+  }
+}
 @media screen and (min-width: 740px) {
   .btnCont__onSiteBtn {
     margin-left: 8.5px;
@@ -187,17 +192,17 @@ body {
   margin-top: 67px;
 }
 .reviewCont__img {
-  height: 72px;
+  max-height: 72px;
   margin-right: 22px;
-  width: 73.34px;
+  max-width: 73.34px;
 }
 .reviewCont__text {
   font-weight: 400;
-  width: 343.26px;
+  max-width: 343.26px;
 }
 @media screen and (min-width: 1080px) {
   .reviewCont__text {
-    width: 407px;
+    max-width: 407px;
   }
 }
 .reviewCont__quote {
@@ -212,7 +217,7 @@ body {
 }
 @media screen and (min-width: 1080px) {
   .reviewCont__name {
-    width: 300px;
+    max-width: 300px;
   }
 }
 .reviewCont__review--hidden {
@@ -335,11 +340,16 @@ body {
   font-weight: 400;
   margin: 0px 20px 0px 20px;
   text-align: center;
-  width: 439px;
+  max-width: 439px;
 }
 @media screen and (min-width: 960px) {
   .break__text {
     width: 632px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .break__text {
+    font-size: 1rem;
   }
 }
 .break__btn {
@@ -357,6 +367,11 @@ body {
 @media screen and (min-width: 1080px) {
   .break__btn {
     margin-top: 44px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .break__btn {
+    width: fit-content;
   }
 }
 .break__btn:hover {
@@ -394,7 +409,7 @@ body {
   font-weight: 700;
   margin: 30px 20px 30px 20px;
   margin-top: 30px;
-  width: 435px;
+  max-width: 435px;
 }
 @media screen and (min-width: 1080px) {
   .lowerMainCont__title {
@@ -406,7 +421,7 @@ body {
 .lowerMainCont__text {
   font-weight: 400;
   margin: 25px 20px 25px 20px;
-  width: 435px;
+  max-width: 435px;
 }
 @media screen and (min-width: 1080px) {
   .lowerMainCont__text {
@@ -431,6 +446,11 @@ body {
     margin: 0;
     position: relative;
     transform: translateX(-55px);
+  }
+}
+@media screen and (max-width: 340px) {
+  .lowerMainCont__btn {
+    width: fit-content;
   }
 }
 
@@ -459,7 +479,7 @@ body {
 
 .about {
   margin-left: 23px;
-  width: 434px;
+  max-width: 434px;
 }
 @media screen and (min-width: 960px) {
   .about {

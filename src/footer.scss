@@ -16,7 +16,7 @@
 }
 .about {
   margin-left: 23px;
-  width: 434px;
+  max-width: 434px;
 
   @include breakpoint($medium) {
     margin-left: 108px;

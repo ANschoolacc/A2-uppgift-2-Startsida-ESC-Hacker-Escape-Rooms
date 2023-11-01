@@ -1,9 +1,16 @@
+$xs: 340px;
 $small: 740px;
 $medium: 960px;
 $large: 1080px;
 $xl: 1200px;
 @mixin breakpoint($point) {
   @media screen and (min-width: $point) {
+    @content;
+  }
+}
+
+@mixin breakpointMin($point) {
+  @media screen and (max-width: $point) {
     @content;
   }
 }
@@ -70,6 +77,10 @@ body {
     height: 66px;
     width: 308px;
 
+    @include breakpointMin($xs) {
+      width: fit-content;
+    }
+
     @include breakpoint($small) {
       margin-left: 8.5px;
       margin-top: 0px;
@@ -95,8 +106,6 @@ body {
       margin-right: 8.5px;
       margin-top: 0;
       width: 308px;
-
-      //
     }
   }
 }
@@ -122,16 +131,16 @@ body {
     margin-top: 67px;
   }
   &__img {
-    height: 72px;
+    max-height: 72px;
     margin-right: 22px;
-    width: 73.34px;
+    max-width: 73.34px;
   }
   &__text {
     font-weight: 400;
-    width: 343.26px;
+    max-width: 343.26px;
 
     @include breakpoint($large) {
-      width: 407px;
+      max-width: 407px;
     }
   }
   &__quote {
@@ -146,7 +155,7 @@ body {
 
     //
     @include breakpoint($large) {
-      width: 300px;
+      max-width: 300px;
     }
   }
   &__review--hidden {
@@ -263,10 +272,14 @@ body {
     font-weight: 400;
     margin: 0px 20px 0px 20px;
     text-align: center;
-    width: 439px;
+    max-width: 439px;
 
     @include breakpoint($medium) {
       width: 632px;
+    }
+
+    @include breakpointMin($xs) {
+      font-size: 1rem;
     }
   }
   &__btn {
@@ -283,6 +296,10 @@ body {
 
     @include breakpoint($large) {
       margin-top: 44px;
+    }
+
+    @include breakpointMin($xs) {
+      width: fit-content;
     }
   }
 
@@ -319,7 +336,7 @@ body {
     font-weight: 700;
     margin: 30px 20px 30px 20px;
     margin-top: 30px;
-    width: 435px;
+    max-width: 435px;
 
     @include breakpoint($large) {
       margin: 0;
@@ -332,7 +349,7 @@ body {
   &__text {
     font-weight: 400;
     margin: 25px 20px 25px 20px;
-    width: 435px;
+    max-width: 435px;
 
     @include breakpoint($large) {
       width: 416px;
@@ -355,6 +372,10 @@ body {
       margin: 0;
       position: relative;
       transform: translateX(-55px);
+    }
+
+    @include breakpointMin($xs) {
+      width: fit-content;
     }
   }
 }
