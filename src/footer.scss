@@ -63,6 +63,10 @@
     line-height: 22px;
     list-style: none;
   }
+
+  &__item:hover {
+    color: #8acfe5;
+  }
 }
 .social {
   display: flex;
@@ -89,5 +93,9 @@
     font-size: 0.75rem;
     line-height: 22px;
     list-style: none;
+  }
+
+  &__item:hover {
+    color: #8acfe5;
   }
 }
