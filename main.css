@@ -48,21 +48,15 @@ body {
 }
 
 .navbar {
-  align-items: center;
   display: none;
   justify-content: center;
   margin-top: 50px;
+  padding: 0;
 }
 @media screen and (min-width: 960px) {
   .navbar {
-    display: block;
+    display: flex;
   }
-}
-.navbar__navList {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
 }
 .navbar__navItem {
   list-style: none;

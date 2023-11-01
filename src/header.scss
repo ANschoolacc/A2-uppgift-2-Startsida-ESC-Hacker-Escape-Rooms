@@ -33,20 +33,14 @@
   }
 }
 .navbar {
-  align-items: center;
   display: none;
   justify-content: center;
   margin-top: 50px;
-
+  padding: 0;
   @include breakpoint($medium) {
-    display: block;
-  }
-  &__navList {
     display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
   }
+
   &__navItem {
     list-style: none;
     margin: 0;
