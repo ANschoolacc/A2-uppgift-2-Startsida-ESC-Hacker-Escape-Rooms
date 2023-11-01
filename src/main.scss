@@ -1,3 +1,9 @@
+@mixin breakpoint() {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+
 html {
   font-size: 24px;
 }
@@ -5,6 +11,7 @@ html {
 body {
   margin: 0;
   font-family: "roboto";
+  overflow-x: hidden;
 }
 /*-----Header section-----*/
 @import "header";
@@ -14,36 +21,22 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-}
-
-.upperMain {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
 
   &__hackerImg {
     width: 100vw;
+
+    @include breakpoint() {
+      display: none;
+    }
   }
 
-  &__btn {
-    font-size: 1rem;
-    font-family: "roboto";
-    font-weight: 700;
-    color: #011827;
-    width: 308px;
-    height: 66px;
-    background-color: #8acfe5;
-    border: none;
-    margin-top: 37px;
-  }
+  &__hackerImgWide {
+    display: none;
+    width: 100vw;
 
-  &__onlineChallenges {
-    color: #36769d;
-    margin-top: 30px;
-    font-weight: 700;
-    font-size: 0.7rem;
-    height: 19.97px;
+    @include breakpoint() {
+      display: block;
+    }
   }
 
   &__popularTitle {
@@ -54,12 +47,74 @@ body {
   }
 }
 
-.review {
+.btnCont--offSet {
+  @include breakpoint() {
+    position: relative;
+    bottom: 33px;
+  }
+}
+
+.btnCont {
   display: flex;
-  font-family: "roboto";
-  height: fit-content;
-  width: 439px;
-  margin-top: 67px;
+  flex-direction: column;
+
+  @include breakpoint() {
+    flex-direction: row;
+    align-items: last baseline;
+    justify-content: center;
+  }
+  &__onSiteBtn {
+    font-size: 1rem;
+    font-family: "roboto";
+    font-weight: 700;
+    color: #011827;
+    width: 308px;
+    height: 66px;
+    background-color: #8acfe5;
+    border: none;
+    border-radius: 4px;
+    margin-top: 37px;
+
+    @include breakpoint() {
+      margin-top: 0px;
+      margin-right: 8.5px;
+    }
+  }
+
+  &__onlineBtn {
+    color: #36769d;
+    font-family: "roboto";
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 0.7rem;
+    height: 19.97px;
+    background-color: transparent;
+    border: none;
+
+    @include breakpoint() {
+      color: #ffffff;
+      background-color: #e3170a;
+      font-size: 1rem;
+      font-weight: 700;
+      width: 308px;
+      height: 66px;
+      border-radius: 4px;
+      margin-top: 0;
+      margin-left: 8.5px;
+
+      //border: none;
+    }
+  }
+}
+
+.reviewCont {
+  display: flex;
+  &__review {
+    display: flex;
+    font-family: "roboto";
+    height: fit-content;
+    margin-top: 67px;
+  }
 
   &__img {
     height: 72px;
@@ -70,6 +125,9 @@ body {
   &__text {
     font-weight: 400;
     width: 343.26px;
+    @include breakpoint() {
+      width: 407px;
+    }
   }
 
   &__quote {
@@ -80,8 +138,25 @@ body {
   &__name {
     font-size: 0.8rem;
     margin: 0px;
-    height: 21px;
+    //height: 21px;
     margin-top: 12px;
+
+    @include breakpoint() {
+      width: 300px;
+    }
+  }
+
+  &__review--hidden {
+    display: none;
+    margin-left: 1rem;
+
+    @include breakpoint() {
+      display: flex;
+    }
+
+    &__text {
+      width: 415px;
+    }
   }
 }
 
@@ -157,11 +232,12 @@ body {
 .break {
   background-color: #011827;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   margin-top: 56px;
-  padding: 95px 0px 91px 0px;
   overflow-x: hidden;
+  height: 500px;
 
   &__text {
     color: #ffffff;
@@ -196,12 +272,14 @@ body {
     font-size: 1.3rem;
     margin-top: 105px;
     font-weight: 700;
+    width: 435px;
     margin: 30px 20px 30px 20px;
   }
 
   &__text {
     margin: 25px 20px 25px 20px;
     font-weight: 400;
+    width: 435px;
   }
 
   &__btn {
@@ -216,51 +294,5 @@ body {
     margin: 25px 0px 64px 21px;
   }
 }
-
-.footer {
-  width: 100vw;
-  background-color: #011827;
-  color: #ffffff;
-  padding: 68px 0px 64px 0px;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-
-  &__title {
-    font-size: 0.8rem;
-    font-weight: 700;
-    margin: 40px 0px 7px 23px;
-  }
-
-  & ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  &__item {
-    font-size: 0.8rem;
-    list-style: none;
-    color: #ffffff;
-    margin: 0px 0px 0px 23px;
-  }
-}
-
-.about {
-  width: 439px;
-
-  &__title {
-    font-size: 0.8rem;
-    font-weight: 700;
-    margin: 0;
-    margin: 0px 0px 0px 23px;
-  }
-
-  &__text {
-    font-size: 0.8rem;
-    list-style: none;
-    color: #ffffff;
-    margin: 0px 0px 0px 23px;
-  }
-}
+/*-----Footer section-----*/
+@import "footer";

@@ -5,27 +5,76 @@ html {
 body {
   margin: 0;
   font-family: "roboto";
+  overflow-x: hidden;
 }
 
 /*-----Header section-----*/
 .header {
-  display: flex;
-  align-items: center;
+  display: block;
   background-color: #011827;
   height: 144px;
 }
+@media screen and (min-width: 960px) {
+  .header {
+    height: 216px;
+  }
+}
 .header__logo {
-  height: 84px;
+  height: 82px;
   width: 128px;
   margin-left: 27px;
+  margin-top: 26px;
 }
 .header__h1 {
+  display: inline-block;
   font-size: 1rem;
   font-weight: 700;
   color: white;
   width: 78px;
   height: 84px;
+  margin: 0;
   margin-left: 10px;
+  margin-top: 25px;
+}
+@media screen and (min-width: 960px) {
+  .header__h1 {
+    font-size: 40px;
+    width: fit-content;
+    height: fit-content;
+    vertical-align: top;
+    margin-top: 58px;
+  }
+}
+
+.navbar {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+@media screen and (min-width: 960px) {
+  .navbar {
+    display: block;
+  }
+}
+.navbar__navList {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.navbar__navItem {
+  list-style: none;
+  margin: 0;
+  margin: 0px 57px 0px 57px;
+}
+.navbar__navItem a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+}
+.navbar__navItem a:hover {
+  color: #8acfe5;
 }
 
 /*----Main section----*/
@@ -35,17 +84,49 @@ body {
   align-items: center;
   overflow-x: hidden;
 }
+.main__hackerImg {
+  width: 100vw;
+}
+@media screen and (min-width: 960px) {
+  .main__hackerImg {
+    display: none;
+  }
+}
+.main__hackerImgWide {
+  display: none;
+  width: 100vw;
+}
+@media screen and (min-width: 960px) {
+  .main__hackerImgWide {
+    display: block;
+  }
+}
+.main__popularTitle {
+  font-size: 1.3rem;
+  margin-top: 105px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
 
-.upperMain {
+@media screen and (min-width: 960px) {
+  .btnCont--offSet {
+    position: relative;
+    bottom: 33px;
+  }
+}
+
+.btnCont {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100vw;
 }
-.upperMain__hackerImg {
-  width: 100vw;
+@media screen and (min-width: 960px) {
+  .btnCont {
+    flex-direction: row;
+    align-items: last baseline;
+    justify-content: center;
+  }
 }
-.upperMain__btn {
+.btnCont__onSiteBtn {
   font-size: 1rem;
   font-family: "roboto";
   font-weight: 700;
@@ -54,47 +135,87 @@ body {
   height: 66px;
   background-color: #8acfe5;
   border: none;
+  border-radius: 4px;
   margin-top: 37px;
 }
-.upperMain__onlineChallenges {
+@media screen and (min-width: 960px) {
+  .btnCont__onSiteBtn {
+    margin-top: 0px;
+    margin-right: 8.5px;
+  }
+}
+.btnCont__onlineBtn {
   color: #36769d;
+  font-family: "roboto";
   margin-top: 30px;
   font-weight: 700;
   font-size: 0.7rem;
   height: 19.97px;
+  background-color: transparent;
+  border: none;
 }
-.upperMain__popularTitle {
-  font-size: 1.3rem;
-  margin-top: 105px;
-  font-weight: 400;
-  margin-bottom: 0;
+@media screen and (min-width: 960px) {
+  .btnCont__onlineBtn {
+    color: #ffffff;
+    background-color: #e3170a;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 308px;
+    height: 66px;
+    border-radius: 4px;
+    margin-top: 0;
+    margin-left: 8.5px;
+  }
 }
 
-.review {
+.reviewCont {
+  display: flex;
+}
+.reviewCont__review {
   display: flex;
   font-family: "roboto";
   height: fit-content;
-  width: 439px;
   margin-top: 67px;
 }
-.review__img {
+.reviewCont__img {
   height: 72px;
   width: 73.34px;
   margin-right: 22px;
 }
-.review__text {
+.reviewCont__text {
   font-weight: 400;
   width: 343.26px;
 }
-.review__quote {
+@media screen and (min-width: 960px) {
+  .reviewCont__text {
+    width: 407px;
+  }
+}
+.reviewCont__quote {
   font-style: italic;
   margin: 0px;
 }
-.review__name {
+.reviewCont__name {
   font-size: 0.8rem;
   margin: 0px;
-  height: 21px;
   margin-top: 12px;
+}
+@media screen and (min-width: 960px) {
+  .reviewCont__name {
+    width: 300px;
+  }
+}
+.reviewCont__review--hidden {
+  display: none;
+  margin-left: 1rem;
+}
+@media screen and (min-width: 960px) {
+  .reviewCont__review--hidden {
+    display: flex;
+  }
+}
+.reviewCont__review--hidden__text {
+  width: 415px;
 }
 
 .sidescroll {
@@ -162,11 +283,12 @@ body {
 .break {
   background-color: #011827;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   margin-top: 56px;
-  padding: 95px 0px 91px 0px;
   overflow-x: hidden;
+  height: 500px;
 }
 .break__text {
   color: #ffffff;
@@ -194,11 +316,13 @@ body {
   font-size: 1.3rem;
   margin-top: 105px;
   font-weight: 700;
+  width: 435px;
   margin: 30px 20px 30px 20px;
 }
 .container__text {
   margin: 25px 20px 25px 20px;
   font-weight: 400;
+  width: 435px;
 }
 .container__btn {
   font-size: 1rem;
@@ -212,11 +336,31 @@ body {
   margin: 25px 0px 64px 21px;
 }
 
+/*-----Footer section-----*/
 .footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 100vw;
   background-color: #011827;
   color: #ffffff;
-  padding: 68px 0px 64px 0px;
+  height: 566px;
+  margin-top: 34px;
+}
+
+.about {
+  width: 434px;
+  margin-left: 23px;
+}
+.about__title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+.about__text {
+  font-size: 0.75rem;
+  list-style: none;
+  color: #ffffff;
 }
 
 .menu {
@@ -224,33 +368,38 @@ body {
   flex-direction: column;
 }
 .menu__title {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  margin: 40px 0px 7px 23px;
+  margin: 7px 0px 7px 23px;
 }
 .menu ul {
   padding: 0;
   margin: 0;
 }
 .menu__item {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   list-style: none;
   color: #ffffff;
   margin: 0px 0px 0px 23px;
 }
 
-.about {
-  width: 439px;
+.social {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0px 0px 23px;
 }
-.about__title {
-  font-size: 0.8rem;
+.social__title {
+  font-size: 0.75rem;
   font-weight: 700;
   margin: 0;
-  margin: 0px 0px 0px 23px;
+  margin-bottom: 7px;
 }
-.about__text {
-  font-size: 0.8rem;
+.social ul {
+  padding: 0;
+  margin: 0;
+}
+.social__item {
+  font-size: 0.75rem;
   list-style: none;
   color: #ffffff;
-  margin: 0px 0px 0px 23px;
 }

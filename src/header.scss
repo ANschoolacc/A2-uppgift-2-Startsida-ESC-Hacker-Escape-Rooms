@@ -1,21 +1,69 @@
 .header {
-  display: flex;
-  align-items: center;
+  display: block;
   background-color: #011827;
   height: 144px;
+  @include breakpoint() {
+    height: 216px;
+  }
 
   &__logo {
-    height: 84px;
+    height: 82px;
     width: 128px;
     margin-left: 27px;
+    margin-top: 26px;
   }
 
   &__h1 {
+    display: inline-block;
     font-size: 1rem;
     font-weight: 700;
     color: white;
     width: 78px;
     height: 84px;
+    margin: 0;
     margin-left: 10px;
+    margin-top: 25px;
+
+    @include breakpoint() {
+      font-size: 40px;
+      width: fit-content;
+      height: fit-content;
+      vertical-align: top;
+      margin-top: 58px;
+    }
+  }
+}
+
+.navbar {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+
+  @include breakpoint() {
+    display: block;
+  }
+
+  &__navList {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__navItem {
+    list-style: none;
+    margin: 0;
+    margin: 0px 57px 0px 57px;
+  }
+
+  &__navItem a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  &__navItem a:hover {
+    color: #8acfe5;
   }
 }
