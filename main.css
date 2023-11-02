@@ -73,7 +73,6 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 .main__hackerImg {
   width: 100vw;
