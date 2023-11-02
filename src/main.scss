@@ -15,7 +15,7 @@ $xl: 1200px;
 }
 html {
   font-size: 24px;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 }
 body {
   font-family: "roboto";
@@ -322,7 +322,6 @@ body {
 .lowerMainCont {
   @include breakpoint($large) {
     display: flex;
-    height: 460px;
     width: 100vw;
   }
   &__content {
