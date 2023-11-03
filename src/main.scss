@@ -334,7 +334,6 @@ body {
     @include breakpoint($large) {
       margin-top: 44px;
     }
-
     @include breakpoint($xxl) {
       transform: scale(1.5);
     }
