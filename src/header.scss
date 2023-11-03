@@ -5,6 +5,9 @@
   @include breakpoint($medium) {
     height: 216px;
   }
+  @include breakpoint($xxl) {
+    height: 250px;
+  }
   &__logo {
     height: 82px;
     margin-left: 27px;
@@ -28,26 +31,39 @@
       margin-top: 68px;
       width: fit-content;
     }
+    @include breakpoint($xxl) {
+      font-size: 2rem;
+    }
   }
 }
+
 .navbar {
   display: none;
   justify-content: center;
-  margin-top: 50px;
+  margin: 50px 0px 20px 0px;
   padding: 0;
+
   @include breakpoint($medium) {
     display: flex;
+  }
+  @include breakpoint($xxl) {
+    justify-content: space-evenly;
   }
 
   &__navItem {
     list-style: none;
     margin: 0px 57px 0px 57px;
+    @include breakpoint($xxl) {
+      font-size: 1.5rem;
+    }
   }
+
   &__navItem a {
     color: #ffffff;
     font-weight: 700;
     text-decoration: none;
   }
+
   &__navItem a:hover {
     color: #8acfe5;
   }

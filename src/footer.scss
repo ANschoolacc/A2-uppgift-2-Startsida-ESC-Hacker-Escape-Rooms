@@ -6,7 +6,7 @@
   margin-top: 34px;
   min-height: 566px;
 
-  @include breakpoint($medium) {
+  @include breakpoint($large) {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 183px;
@@ -21,16 +21,24 @@
     margin: 146px 0px 0px 108px;
     width: 416px;
   }
+
   &__title {
     font-size: 0.75rem;
     font-weight: 700;
     margin: 0;
     margin-bottom: 7px;
+    @include breakpoint($xxl) {
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+    }
   }
   &__text {
     font-size: 0.75rem;
     list-style: none;
     margin: 0;
+    @include breakpoint($xxl) {
+      font-size: 1.2rem;
+    }
   }
 }
 .lowerNav {
@@ -50,12 +58,20 @@
     @include breakpoint($medium) {
       margin-top: 0px;
     }
+    @include breakpoint($xxl) {
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+    }
   }
   &__item {
     cursor: pointer;
     font-size: 0.75rem;
     line-height: 22px;
     list-style: none;
+    @include breakpoint($xxl) {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
 
     & a {
       text-decoration: none;
