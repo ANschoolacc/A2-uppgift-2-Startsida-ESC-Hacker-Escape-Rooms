@@ -17,10 +17,15 @@
     />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
-  <body>
+  <body class="body">
     <header class="header">
-      <img class="header__logo" src="assets/image 4.png" alt="ESC-Logo" />
-      <h1 class="header__title">Hacker Escape Rooms</h1>
+      <div class="topCont">
+        <img class="topCont__logo" src="assets/image 4.png" alt="ESC-Logo" />
+        <h1 class="topCont__title">Hacker Escape Rooms</h1>
+        <div class="topCont__menuBtnCont">
+          <img class="topCont__menuBtn" src="assets/Group 7.png" alt="" />
+        </div>
+      </div>
 
       <ul class="navbar">
         <li class="navbar__navItem"><a href="">Play online</a></li>
@@ -28,6 +33,18 @@
         <li class="navbar__navItem"><a href="">The story</a></li>
         <li class="navbar__navItem"><a href="">Contact us</a></li>
       </ul>
+      <div class="fadeWhite"></div>
+      <div class="menuCont">
+        <div class="menuCont__closeCont">
+          <img class="menuCont__close" src="assets/close.png" alt="X" />
+        </div>
+        <ul class="menuCont__menu">
+          <li class="menuCont__item"><a href="">Play online</a></li>
+          <li class="menuCont__item"><a href="">Play on-site</a></li>
+          <li class="menuCont__item"><a href="">The story</a></li>
+          <li class="menuCont__item"><a href="">Contact us</a></li>
+        </ul>
+      </div>
     </header>
 
     <main class="main">
@@ -220,5 +237,7 @@
         <li class="lowerNav__item"><a href="">Twitter</a></li>
       </ul>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
