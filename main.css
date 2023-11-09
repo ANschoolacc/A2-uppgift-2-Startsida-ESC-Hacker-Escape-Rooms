@@ -395,6 +395,7 @@ html {
   .sidescroll {
     align-items: center;
     margin-top: 87px;
+    padding: 10px 10px 10px 10px;
     overflow-x: auto;
     width: auto;
   }
@@ -431,8 +432,18 @@ html {
 .sidescroll__card--moreMarginLeft {
   margin-left: 52px;
 }
+@media screen and (min-width: 1200px) {
+  .sidescroll__card--moreMarginLeft {
+    margin-left: 0px;
+  }
+}
 .sidescroll__card--moreMarginRight {
   margin-right: 52px;
+}
+@media screen and (min-width: 1200px) {
+  .sidescroll__card--moreMarginRight {
+    margin-right: 0px;
+  }
 }
 .sidescroll__img {
   background-image: url("assets/image 2.png");
@@ -666,7 +677,7 @@ html {
   margin: 64px 0px 40px 23px;
   max-width: 434px;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1080px) {
   .about {
     margin: 146px 0px 0px 108px;
     width: 416px;
@@ -701,7 +712,7 @@ html {
   height: fit-content;
   min-width: fit-content;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1080px) {
   .lowerNav {
     margin-top: 146px;
   }
@@ -711,7 +722,7 @@ html {
   font-weight: 700;
   margin: 0px 0px 7px 0px;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1080px) {
   .lowerNav__title {
     margin-top: 0px;
   }
@@ -741,13 +752,13 @@ html {
 .lowerNav__item a:hover {
   color: #8acfe5;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1080px) {
   .lowerNav--marginRight {
     margin-right: 206px;
     margin-left: 50px;
   }
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1080px) {
   .lowerNav--marginLeft {
     margin-left: 150px;
   }

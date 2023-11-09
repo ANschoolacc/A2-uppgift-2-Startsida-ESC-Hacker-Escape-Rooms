@@ -208,6 +208,7 @@ html {
   @include breakpoint($xl) {
     align-items: center;
     margin-top: 87px;
+    padding: 10px 10px 10px 10px;
     overflow-x: auto;
     width: auto;
   }
@@ -237,9 +238,17 @@ html {
   }
   &__card--moreMarginLeft {
     margin-left: 52px;
+
+    @include breakpoint($xl) {
+      margin-left: 0px;
+    }
   }
   &__card--moreMarginRight {
     margin-right: 52px;
+
+    @include breakpoint($xl) {
+      margin-right: 0px;
+    }
   }
   &__img {
     background-image: url("assets/image 2.png");
