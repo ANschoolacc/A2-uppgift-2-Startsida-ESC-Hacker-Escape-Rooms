@@ -9,13 +9,14 @@ document.querySelector(".topCont__menuBtn").addEventListener("click", () => {
   document.querySelector(".body").classList.add("body--openMenu");
   /*Adds class to element */
   document.querySelector(".fadeWhite").classList.add("fadeWhite--active");
-});
-/*Eventlistener that reacts to the X symbol in overlaymenu */
-document.querySelector(".menuCont__close").addEventListener("click", () => {
-  /*Removes class from element */
-  document.querySelector(".menuCont").classList.remove("menuCont--open");
-  /*Removes class from element */
-  document.querySelector(".body").classList.remove("body--openMenu");
-  /*Removes class from element */
-  document.querySelector(".fadeWhite").classList.remove("fadeWhite--active");
+
+  /*Eventlistener that reacts to the X symbol in overlaymenu */
+  document.querySelector(".menuCont__close").addEventListener("click", () => {
+    /*Removes class from element */
+    document.querySelector(".menuCont").classList.remove("menuCont--open");
+    /*Removes class from element */
+    document.querySelector(".body").classList.remove("body--openMenu");
+    /*Removes class from element */
+    document.querySelector(".fadeWhite").classList.remove("fadeWhite--active");
+  });
 });

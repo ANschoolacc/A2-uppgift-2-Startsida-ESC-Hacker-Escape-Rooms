@@ -117,7 +117,6 @@
   &--open {
     display: flex;
     animation: fadeIn 0.1s linear forwards;
-    //animation-delay: 0.2s;
     @include breakpoint($medium) {
       display: none;
     }
@@ -169,7 +168,7 @@
 @keyframes fadeIn {
   0% {
     opacity: 0%;
-    scale: 70%;
+    scale: 80%;
   }
   100% {
     opacity: 100%;
