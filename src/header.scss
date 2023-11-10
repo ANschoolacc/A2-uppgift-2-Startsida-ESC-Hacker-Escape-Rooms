@@ -1,7 +1,7 @@
 .header {
+  background-color: #011827;
   display: flex;
   flex-direction: column;
-  background-color: #011827;
   height: 144px;
 
   @include breakpoint($medium) {
@@ -12,8 +12,9 @@
   }
 }
 
-.topCont {
+.logoAndTitle {
   display: flex;
+
   &__logo {
     height: 82px;
     margin-left: 27px;
@@ -28,8 +29,8 @@
     margin: 0;
     margin-left: 13px;
     margin-top: 25px;
-    width: 78px;
     vertical-align: top;
+    width: 78px;
 
     @include breakpoint($small) {
       font-size: 40px;
@@ -40,21 +41,16 @@
       font-size: 2rem;
     }
   }
-
-  &__menuBtnCont {
-    display: flex;
-    flex: 1;
-    justify-content: end;
+  &__hamburgerBtn {
+    position: absolute;
+    height: 32px;
+    width: 51px;
+    top: 28px;
+    right: 20px;
 
     @include breakpoint($medium) {
       display: none;
     }
-  }
-
-  &__menuBtn {
-    height: 32px;
-    width: 51px;
-    margin: 28px 20px 0px 0px;
   }
 }
 
@@ -70,101 +66,88 @@
   @include breakpoint($xxl) {
     justify-content: space-evenly;
   }
-
   &__navItem {
     list-style: none;
     margin: 0px 57px 0px 57px;
+
     @include breakpoint($xxl) {
       font-size: 1.5rem;
     }
   }
-
   &__navItem a {
     color: #ffffff;
     font-weight: 700;
     text-decoration: none;
   }
-
   &__navItem a:hover {
     color: #8acfe5;
   }
 }
 
-.fadeWhite--active {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.hamburgerMenu {
+  &--active {
+    animation: fadeToWhite 0.3s linear forwards;
+    background-color: #ffffff;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
 
-  animation: fadeToWhite 0.3s linear forwards;
-}
-
-.menuCont {
-  display: none;
-  flex-direction: column;
-  background-color: #011827;
-  position: fixed;
-  padding: 0;
-  z-index: 2;
-  top: 23px;
-  left: 20px;
-  bottom: 23px;
-  right: 20px;
-  box-shadow: 0px 0px 8px #00000059;
-
-  &--open {
-    display: flex;
-    animation: fadeIn 0.1s linear forwards;
     @include breakpoint($medium) {
       display: none;
     }
   }
+  &__menuCont {
+    background-color: #011827;
+    bottom: 23px;
+    box-shadow: 0px 0px 8px #00000059;
+    display: none;
+    flex-direction: column;
+    left: 20px;
+    padding: 0;
+    position: fixed;
+    right: 20px;
+    top: 23px;
 
-  &__closeCont {
-    display: flex;
-    align-self: stretch;
-    justify-content: end;
+    &--open {
+      animation: fadeIn 0.1s linear forwards;
+      display: flex;
+    }
   }
-
-  &__close {
+  &__closeBtn {
+    align-self: flex-end;
     height: 40px;
-    width: 36px;
     margin: 25px 28px 0px 0px;
+    width: 36px;
 
     &:hover {
       color: #8acfe5;
     }
   }
-
   &__menu {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: flex;
     flex: 1;
-    padding: 0;
+    flex-direction: column;
     margin: 0;
+    margin-top: 200px;
+    padding: 0;
   }
-
   &__item {
     font-size: 1.5rem;
-    list-style: none;
     font-weight: 700;
+    list-style: none;
     margin-bottom: 50px;
 
     & a {
       color: #ffffff;
       text-decoration: none;
     }
-
     & a:hover {
       color: #8acfe5;
     }
   }
 }
-
 @keyframes fadeIn {
   0% {
     opacity: 0%;
@@ -175,14 +158,11 @@
     scale: 100%;
   }
 }
-
 @keyframes fadeToWhite {
   0% {
-    background-color: #ffffff;
-    opacity: 0%;
+    background-color: #ffffff00;
   }
   100% {
-    background-color: #ffffff;
-    opacity: 50%;
+    background-color: #ffffff7f;
   }
 }

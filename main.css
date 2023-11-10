@@ -13,9 +13,9 @@ html {
 
 /*-----Header section-----*/
 .header {
+  background-color: #011827;
   display: flex;
   flex-direction: column;
-  background-color: #011827;
   height: 144px;
 }
 @media screen and (min-width: 960px) {
@@ -29,16 +29,16 @@ html {
   }
 }
 
-.topCont {
+.logoAndTitle {
   display: flex;
 }
-.topCont__logo {
+.logoAndTitle__logo {
   height: 82px;
   margin-left: 27px;
   margin-top: 26px;
   width: 128px;
 }
-.topCont__title {
+.logoAndTitle__title {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 700;
@@ -46,35 +46,32 @@ html {
   margin: 0;
   margin-left: 13px;
   margin-top: 25px;
-  width: 78px;
   vertical-align: top;
+  width: 78px;
 }
 @media screen and (min-width: 740px) {
-  .topCont__title {
+  .logoAndTitle__title {
     font-size: 40px;
     margin-top: 68px;
     width: fit-content;
   }
 }
 @media screen and (min-width: 1650px) {
-  .topCont__title {
+  .logoAndTitle__title {
     font-size: 2rem;
   }
 }
-.topCont__menuBtnCont {
-  display: flex;
-  flex: 1;
-  justify-content: end;
-}
-@media screen and (min-width: 960px) {
-  .topCont__menuBtnCont {
-    display: none;
-  }
-}
-.topCont__menuBtn {
+.logoAndTitle__hamburgerBtn {
+  position: absolute;
   height: 32px;
   width: 51px;
-  margin: 28px 20px 0px 0px;
+  top: 28px;
+  right: 20px;
+}
+@media screen and (min-width: 960px) {
+  .logoAndTitle__hamburgerBtn {
+    display: none;
+  }
 }
 
 .navbar {
@@ -111,71 +108,64 @@ html {
   color: #8acfe5;
 }
 
-.fadeWhite--active {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.hamburgerMenu--active {
   animation: fadeToWhite 0.3s linear forwards;
-}
-
-.menuCont {
-  display: none;
-  flex-direction: column;
-  background-color: #011827;
+  background-color: #ffffff;
+  height: 100vh;
   position: fixed;
-  padding: 0;
-  z-index: 2;
-  top: 23px;
-  left: 20px;
-  bottom: 23px;
-  right: 20px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3490196078);
-}
-.menuCont--open {
-  display: flex;
-  animation: fadeIn 0.1s linear forwards;
+  width: 100vw;
+  z-index: 1;
 }
 @media screen and (min-width: 960px) {
-  .menuCont--open {
+  .hamburgerMenu--active {
     display: none;
   }
 }
-.menuCont__closeCont {
+.hamburgerMenu__menuCont {
+  background-color: #011827;
+  bottom: 23px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3490196078);
+  display: none;
+  flex-direction: column;
+  left: 20px;
+  padding: 0;
+  position: fixed;
+  right: 20px;
+  top: 23px;
+}
+.hamburgerMenu__menuCont--open {
+  animation: fadeIn 0.1s linear forwards;
   display: flex;
-  align-self: stretch;
-  justify-content: end;
 }
-.menuCont__close {
+.hamburgerMenu__closeBtn {
+  align-self: flex-end;
   height: 40px;
-  width: 36px;
   margin: 25px 28px 0px 0px;
+  width: 36px;
 }
-.menuCont__close:hover {
+.hamburgerMenu__closeBtn:hover {
   color: #8acfe5;
 }
-.menuCont__menu {
-  display: flex;
+.hamburgerMenu__menu {
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  display: flex;
   flex: 1;
-  padding: 0;
+  flex-direction: column;
   margin: 0;
+  margin-top: 200px;
+  padding: 0;
 }
-.menuCont__item {
+.hamburgerMenu__item {
   font-size: 1.5rem;
-  list-style: none;
   font-weight: 700;
+  list-style: none;
   margin-bottom: 50px;
 }
-.menuCont__item a {
+.hamburgerMenu__item a {
   color: #ffffff;
   text-decoration: none;
 }
-.menuCont__item a:hover {
+.hamburgerMenu__item a:hover {
   color: #8acfe5;
 }
 
@@ -191,12 +181,10 @@ html {
 }
 @keyframes fadeToWhite {
   0% {
-    background-color: #ffffff;
-    opacity: 0%;
+    background-color: rgba(255, 255, 255, 0);
   }
   100% {
-    background-color: #ffffff;
-    opacity: 50%;
+    background-color: rgba(255, 255, 255, 0.4980392157);
   }
 }
 /*-----Main section-----*/
@@ -395,16 +383,16 @@ html {
   .sidescroll {
     align-items: center;
     margin-top: 87px;
-    padding: 10px 10px 10px 10px;
     overflow-x: auto;
+    padding: 10px 10px 10px 10px;
     width: auto;
   }
 }
 @media screen and (min-width: 1650px) {
   .sidescroll {
+    height: 600px;
     justify-content: space-evenly;
     width: 100vw;
-    height: 600px;
   }
 }
 .sidescroll::-webkit-scrollbar {
@@ -563,13 +551,13 @@ html {
 }
 
 @media screen and (min-width: 1080px) {
-  .lowerMainCont {
+  .info {
     display: flex;
     width: 100vw;
   }
 }
 @media screen and (min-width: 1080px) {
-  .lowerMainCont__content {
+  .info__content {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -577,16 +565,16 @@ html {
     width: 50vw;
   }
 }
-.lowerMainCont__img {
+.info__img {
   height: auto;
   width: 100vw;
 }
 @media screen and (min-width: 1080px) {
-  .lowerMainCont__img {
+  .info__img {
     width: 50vw;
   }
 }
-.lowerMainCont__title {
+.info__title {
   font-size: 1.3rem;
   font-weight: 700;
   margin: 30px 20px 30px 20px;
@@ -594,33 +582,33 @@ html {
   max-width: 435px;
 }
 @media screen and (min-width: 1080px) {
-  .lowerMainCont__title {
+  .info__title {
     margin: 0;
     margin-top: 60px;
     width: 416px;
   }
 }
 @media screen and (min-width: 1650px) {
-  .lowerMainCont__title {
+  .info__title {
     font-size: 1.5rem;
   }
 }
-.lowerMainCont__text {
+.info__text {
   font-weight: 400;
   margin: 25px 20px 25px 20px;
   max-width: 435px;
 }
 @media screen and (min-width: 1080px) {
-  .lowerMainCont__text {
+  .info__text {
     width: 416px;
   }
 }
 @media screen and (min-width: 1650px) {
-  .lowerMainCont__text {
+  .info__text {
     font-size: 1.2rem;
   }
 }
-.lowerMainCont__btn {
+.info__btn {
   background-color: #e3170a;
   border: none;
   border-radius: 4px;
@@ -634,12 +622,12 @@ html {
   width: 308px;
 }
 @media screen and (max-width: 414px) {
-  .lowerMainCont__btn {
+  .info__btn {
     width: fit-content;
   }
 }
 @media screen and (min-width: 1080px) {
-  .lowerMainCont__btn {
+  .info__btn {
     margin: 0;
     margin-bottom: 66px;
     position: relative;
@@ -647,11 +635,11 @@ html {
   }
 }
 @media screen and (min-width: 1650px) {
-  .lowerMainCont__btn {
+  .info__btn {
     transform: translateX(-25px) scale(1.2);
   }
 }
-.lowerMainCont--reversed {
+.info--reversed {
   flex-direction: row-reverse;
 }
 
@@ -707,10 +695,10 @@ html {
 }
 
 .lowerNav {
-  margin: 0px 0px 35px 23px;
-  padding: 0;
   height: fit-content;
+  margin: 0px 0px 35px 23px;
   min-width: fit-content;
+  padding: 0;
 }
 @media screen and (min-width: 1080px) {
   .lowerNav {
@@ -746,16 +734,16 @@ html {
   }
 }
 .lowerNav__item a {
-  text-decoration: none;
   color: #ffffff;
+  text-decoration: none;
 }
 .lowerNav__item a:hover {
   color: #8acfe5;
 }
 @media screen and (min-width: 1080px) {
   .lowerNav--marginRight {
-    margin-right: 206px;
     margin-left: 50px;
+    margin-right: 206px;
   }
 }
 @media screen and (min-width: 1080px) {
