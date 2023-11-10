@@ -10,14 +10,17 @@ $xxl: 1650px;
     @content;
   }
 }
+
 @mixin breakpointMax($point) {
   @media screen and (max-width: $point) {
     @content;
   }
 }
+
 html {
   font-size: 24px;
 }
+
 .body {
   font-family: "roboto";
   margin: 0;
@@ -27,15 +30,14 @@ html {
     overflow: hidden;
   }
 }
-
 /*-----Header section-----*/
 @import "header";
-
 /*-----Main section-----*/
 .main {
   align-items: center;
   display: flex;
   flex-direction: column;
+
   &__hackerImg {
     width: 100vw;
 
@@ -123,7 +125,6 @@ html {
       width: 308px;
     }
   }
-
   &--offSet {
     @include breakpoint($small) {
       bottom: 33px;
@@ -131,7 +132,6 @@ html {
       position: relative;
     }
   }
-
   &--moreTopMargin {
     @include breakpoint($medium) {
       margin-top: 77px;
@@ -147,6 +147,7 @@ html {
     font-family: "roboto";
     height: fit-content;
     margin-top: 67px;
+
     @include breakpoint($large) {
       margin-top: 74px;
     }
@@ -198,6 +199,7 @@ html {
     }
   }
 }
+
 .sidescroll {
   display: flex;
   margin-top: 44px;
@@ -208,14 +210,14 @@ html {
   @include breakpoint($xl) {
     align-items: center;
     margin-top: 87px;
-    padding: 10px 10px 10px 10px;
     overflow-x: auto;
+    padding: 10px 10px 10px 10px;
     width: auto;
   }
   @include breakpoint($xxl) {
+    height: 600px;
     justify-content: space-evenly;
     width: 100vw;
-    height: 600px;
   }
   &::-webkit-scrollbar {
     display: none;
@@ -357,7 +359,7 @@ html {
   }
 }
 
-.lowerMainCont {
+.info {
   @include breakpoint($large) {
     display: flex;
     width: 100vw;
@@ -437,6 +439,5 @@ html {
     flex-direction: row-reverse;
   }
 }
-
 /*-----Footer section-----*/
 @import "footer";
