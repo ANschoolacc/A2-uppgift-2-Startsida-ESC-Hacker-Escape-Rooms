@@ -132,6 +132,7 @@ html {
   position: fixed;
   right: 20px;
   top: 23px;
+  overflow-y: scroll;
 }
 .hamburgerMenu__menuCont--open {
   animation: fadeIn 0.1s linear forwards;

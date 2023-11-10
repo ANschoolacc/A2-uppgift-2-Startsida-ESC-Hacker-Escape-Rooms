@@ -108,6 +108,7 @@
     position: fixed;
     right: 20px;
     top: 23px;
+    overflow-y: scroll;
 
     &--open {
       animation: fadeIn 0.1s linear forwards;
